@@ -3,7 +3,7 @@ import TechSelectOptions from "../techs/TechSelectOptions"
 import { connect } from "react-redux"
 import PropTypes from "prop-types"
 import M from "materialize-css/dist/js/materialize.min.js"
-import { updateTicket } from "../../actions/logTickets"
+import { updateTicket } from "../../actions/ticketsActions"
 
 const EditTicketModal = ({ current, updateLog }) => {
   const [message, setMessage] = useState("")
