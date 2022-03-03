@@ -1,4 +1,9 @@
-import { GET_TICKETS, SET_LOADING, TICKETS_ERROR } from "../actions/types"
+import {
+  GET_TICKETS,
+  SET_LOADING,
+  TICKETS_ERROR,
+  ADD_TICKET,
+} from "../actions/types"
 
 const initialState = {
   tickets: null,
@@ -13,6 +18,12 @@ export default (state = initialState, action) => {
       return {
         ...state,
         tickets: action.payload,
+        loading: false,
+      }
+    case ADD_TICKET:
+      return {
+        ...state,
+        ticket: [...state.logs, action.payload],
         loading: false,
       }
     case SET_LOADING:
