@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import M from "materialize-css/dist/js/materialize.min.js"
 
-const AddTicketModal = () => {
+const EditTicketModal = () => {
   const [message, setMessage] = useState("")
   const [attention, setAttention] = useState(false)
   const [tech, setTech] = useState("")
@@ -10,6 +10,9 @@ const AddTicketModal = () => {
     if (message === "" || tech === "") {
       M.toast({ html: "Please enter a message and tech" })
     } else {
+      console.log(message, tech, attention)
+
+      // Clear Fields
       setMessage("")
       setTech("")
       setAttention(false)
@@ -17,7 +20,7 @@ const AddTicketModal = () => {
   }
 
   return (
-    <div id="add-log-modal" className="modal" style={modalStyle}>
+    <div id="edit-log-modal" className="modal" style={modalStyle}>
       <div className="modal-content">
         <h4>Enter System Ticket</h4>
         <div className="row">
@@ -87,4 +90,4 @@ const modalStyle = {
   height: "75%",
 }
 
-export default AddTicketModal
+export default EditTicketModal
