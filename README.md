@@ -15,10 +15,6 @@
 
 ![screenshot](src/images/search-bar-functionality.png)
 
-## Initial Prototype with the Components Structure
-
-![screenshot](src/images/Prototype-CardTradeWidget.png)
-
 ## Here are the steps to run this App
 - Clone 
 - npm install
