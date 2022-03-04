@@ -1,7 +1,7 @@
-# RT TICKETING
+# RT TICKETING 
 (Request Tracker Ticketing System SPA with ReactJs && Redux)
 
-## Live Demo
+## Live Demo (All features work perfectly but for now only in development(not in production) so clone and test localy, this is only front end SPA, in future will add back end)
 [The APP](https://requesttrackersystem.netlify.app/)
 
 ## Main Page whit the SearchBar
