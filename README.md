@@ -11,10 +11,6 @@
 <br>
 <br>
 
-## SearchBar Filter and Autocomoplete functionality
-
-![screenshot](src/images/search-bar-functionality.png)
-
 ## Here are the steps to run this App
 - Clone 
 - npm install
