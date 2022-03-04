@@ -106,7 +106,7 @@ export const updateTicket = (ticket) => async (dispatch) => {
   }
 }
 
-export const searchTICKETS = (text) => async (dispatch) => {
+export const searchTickets = (text) => async (dispatch) => {
   try {
     setLoading()
 
