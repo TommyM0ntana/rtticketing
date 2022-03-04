@@ -17,7 +17,7 @@ const Tickets = ({ ticket: { tickets, loading }, getTickets }) => {
   return (
     <ul className="collection with-header">
       <li className="collection-header">
-        <h4 className="center">Request Tracker System</h4>
+        <h6 className="center">Request Tracker System</h6>
       </li>
       {!loading && tickets.length === 0 ? (
         <p className="center">No tickets to show...</p>

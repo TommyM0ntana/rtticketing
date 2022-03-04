@@ -30,7 +30,7 @@ export const addTech = (tech) => async (dispatch) => {
   try {
     setLoading()
 
-    const res = await fetch("https://it-logger-api.herokuapp.com//techs", {
+    const res = await fetch("https://it-logger-api.herokuapp.com/techs", {
       method: "POST",
       body: JSON.stringify(tech),
       headers: {
