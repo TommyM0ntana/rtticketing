@@ -2,7 +2,7 @@ import React from "react"
 import Moment from "react-moment"
 import { connect } from "react-redux"
 import PropTypes from "prop-types"
-import { deleteTicket, setCurrent } from "../../actions/logActions"
+import { deleteTicket, setCurrent } from "../../actions/ticketsActions"
 
 import M from "materialize-css/dist/js/materialize.min.js"
 
@@ -38,7 +38,7 @@ const Ticket = ({ ticket, deleteTicket, setCurrent }) => {
   )
 }
 
-TicketItem.propTypes = {
+Ticket.propTypes = {
   ticket: PropTypes.object.isRequired,
   deleteTicket: PropTypes.func.isRequired,
   setCurrent: PropTypes.func.isRequired,
