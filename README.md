@@ -6,7 +6,7 @@
 
 ## Main Page whit the SearchBar
 
-![screenshot](src/images/main.png)
+![screenshot](src/images/showcase.png)
 
 <br>
 <br>
