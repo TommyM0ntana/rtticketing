@@ -1,10 +1,12 @@
 # RT TICKETING
 (Request Tracker Ticketing System SPA with ReactJs && Redux)
 
+## Live Demo
+[The APP](https://requesttrackersystem.netlify.app/)
 
 ## Main Page whit the SearchBar
 
-![screenshot](src/images/main.png)
+![screenshot](src/images/showcase.png)
 
 <br>
 <br>
@@ -12,10 +14,6 @@
 ## SearchBar Filter and Autocomoplete functionality
 
 ![screenshot](src/images/search-bar-functionality.png)
-
-## Initial Prototype with the Components Structure
-
-![screenshot](src/images/Prototype-CardTradeWidget.png)
 
 ## Here are the steps to run this App
 - Clone 
