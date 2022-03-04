@@ -1,13 +1,6 @@
 {
   "tickets": [
     {
-      "message": "Changed network card in server 007",
-      "attention": false,
-      "tech": "Sam Smith",
-      "date": "2019-05-31T15:46:10.179Z",
-      "id": 1
-    },
-    {
       "message": "Hard drive failed in workstation 002",
       "attention": true,
       "tech": "Sara Wilson",
@@ -27,6 +20,13 @@
       "tech": "Sam Smith",
       "date": "2022-03-04T10:37:05.986Z",
       "id": 4
+    },
+    {
+      "message": "test ticket",
+      "attention": true,
+      "tech": "John Doe",
+      "date": "2022-03-04T13:47:19.206Z",
+      "id": 5
     }
   ],
   "techs": [
@@ -44,6 +44,11 @@
       "id": 3,
       "firstName": "Sara",
       "lastName": "Wilson"
+    },
+    {
+      "firstName": "test",
+      "lastName": "test",
+      "id": 4
     }
   ]
 }

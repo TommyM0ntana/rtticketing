@@ -14,7 +14,7 @@ export const getTickets = () => async (dispatch) => {
   try {
     setLoading()
 
-    const res = await fetch("/tickets")
+    const res = await fetch("https://it-logger-api.herokuapp.com/logs")
     const data = await res.json()
 
     dispatch({
@@ -39,7 +39,7 @@ export const addTicket = (ticket) => async (dispatch) => {
   try {
     setLoading()
 
-    const res = await fetch("/tickets", {
+    const res = await fetch("https://it-logger-api.herokuapp.com/logs", {
       method: "POST",
       body: JSON.stringify(ticket),
       headers: {
@@ -64,7 +64,7 @@ export const deleteTicket = (id) => async (dispatch) => {
   try {
     setLoading()
 
-    await fetch(`/tickets/${id}`, {
+    await fetch(`https://it-logger-api.herokuapp.com/logs/${id}`, {
       method: "DELETE",
     })
 
@@ -84,13 +84,16 @@ export const updateTicket = (ticket) => async (dispatch) => {
   try {
     setLoading()
 
-    const res = await fetch(`/tickets/${ticket.id}`, {
-      method: "PUT",
-      body: JSON.stringify(ticket),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
+    const res = await fetch(
+      `https://it-logger-api.herokuapp.com/logs/${ticket.id}`,
+      {
+        method: "PUT",
+        body: JSON.stringify(ticket),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
 
     const data = await res.json()
 
@@ -110,7 +113,9 @@ export const searchTickets = (text) => async (dispatch) => {
   try {
     setLoading()
 
-    const res = await fetch(`/tickets?q=${text}`)
+    const res = await fetch(
+      `https://it-logger-api.herokuapp.com/logs?q=${text}`
+    )
     const data = await res.json()
 
     dispatch({

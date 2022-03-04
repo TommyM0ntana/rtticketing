@@ -10,6 +10,8 @@ import AddTechModal from "./components/techs/AddTechModal"
 import TechListModal from "./components/techs/TechListModal"
 import { Provider } from "react-redux"
 import store from "./store"
+import Header from "./components/layout/Header"
+import Footer from "./components/layout/Footer"
 
 const App = () => {
   useEffect(() => {
@@ -18,8 +20,9 @@ const App = () => {
   return (
     <Provider store={store}>
       <Fragment>
-        <SearchBar />
+        <Header />
         <div className="container">
+          <SearchBar />
           <AddBtn />
           <AddTicketModal />
           <EditTicketModal />
@@ -27,6 +30,7 @@ const App = () => {
           <TechListModal />
           <Tickets />
         </div>
+        <Footer />
       </Fragment>
     </Provider>
   )

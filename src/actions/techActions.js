@@ -6,12 +6,11 @@ import {
   TECHS_ERROR,
 } from "./types"
 
-// Get techs from server
 export const getTechs = () => async (dispatch) => {
   try {
     setLoading()
 
-    const res = await fetch("/techs")
+    const res = await fetch("https://it-logger-api.herokuapp.com/techs")
     const data = await res.json()
 
     dispatch({
@@ -31,7 +30,7 @@ export const addTech = (tech) => async (dispatch) => {
   try {
     setLoading()
 
-    const res = await fetch("/techs", {
+    const res = await fetch("https://it-logger-api.herokuapp.com//techs", {
       method: "POST",
       body: JSON.stringify(tech),
       headers: {
@@ -56,7 +55,7 @@ export const deleteTech = (id) => async (dispatch) => {
   try {
     setLoading()
 
-    await fetch(`/techs/${id}`, {
+    await fetch(`https://it-logger-api.herokuapp.com/techs/${id}`, {
       method: "DELETE",
     })
 

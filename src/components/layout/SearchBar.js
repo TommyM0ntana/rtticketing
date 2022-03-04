@@ -18,7 +18,7 @@ const SearchBar = ({ searchTickets }) => {
             <input
               id="search"
               type="search"
-              placeholder="Search Logs.."
+              placeholder="Search ticket.."
               ref={text}
               onChange={onChange}
             />
@@ -34,7 +34,7 @@ const SearchBar = ({ searchTickets }) => {
 }
 
 SearchBar.propTypes = {
-  searchLogs: PropTypes.func.isRequired,
+  searchTickets: PropTypes.func.isRequired,
 }
 
 export default connect(null, { searchTickets })(SearchBar)

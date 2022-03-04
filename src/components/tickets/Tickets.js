@@ -8,7 +8,6 @@ import { getTickets } from "../../actions/ticketsActions"
 const Tickets = ({ ticket: { tickets, loading }, getTickets }) => {
   useEffect(() => {
     getTickets()
-    // eslint-disable-next-line
   }, [])
 
   if (loading || tickets === null) {
@@ -18,7 +17,7 @@ const Tickets = ({ ticket: { tickets, loading }, getTickets }) => {
   return (
     <ul className="collection with-header">
       <li className="collection-header">
-        <h4 className="center">System tickets</h4>
+        <h4 className="center">Request Tracker System</h4>
       </li>
       {!loading && tickets.length === 0 ? (
         <p className="center">No tickets to show...</p>

@@ -1,13 +1,15 @@
 import React, { useState } from "react"
-import M from "materialize-css/dist/js/materialize.min.js"
+import TechSelectOptions from "../techs/TechSelectOptions"
 import { connect } from "react-redux"
 import PropTypes from "prop-types"
 import { addTicket } from "../../actions/ticketsActions"
+import M from "materialize-css/dist/js/materialize.min.js"
 
 const AddTicketModal = ({ addTicket }) => {
   const [message, setMessage] = useState("")
   const [attention, setAttention] = useState(false)
   const [tech, setTech] = useState("")
+
   const onSubmit = () => {
     if (message === "" || tech === "") {
       M.toast({ html: "Please enter a message and tech" })
@@ -18,9 +20,7 @@ const AddTicketModal = ({ addTicket }) => {
         tech,
         date: new Date(),
       }
-
       addTicket(newTicket)
-
       M.toast({ html: `Ticket added by ${tech}` })
       setMessage("")
       setTech("")
@@ -31,7 +31,7 @@ const AddTicketModal = ({ addTicket }) => {
   return (
     <div id="add-log-modal" className="modal" style={modalStyle}>
       <div className="modal-content">
-        <h4>Enter System Ticket</h4>
+        <h4>Enter Ticket</h4>
         <div className="row">
           <div className="input-field">
             <input
@@ -57,9 +57,7 @@ const AddTicketModal = ({ addTicket }) => {
               <option value="" disabled>
                 Select Technician
               </option>
-              <option value="John Doe">John Doe</option>
-              <option value="Sam Smith">Sam Smith</option>
-              <option value="Sara Wilson">Sara Wilson</option>
+              <TechSelectOptions />
             </select>
           </div>
         </div>
@@ -93,11 +91,14 @@ const AddTicketModal = ({ addTicket }) => {
     </div>
   )
 }
+
 AddTicketModal.propTypes = {
   addTicket: PropTypes.func.isRequired,
 }
+
 const modalStyle = {
   width: "75%",
   height: "75%",
 }
+
 export default connect(null, { addTicket })(AddTicketModal)

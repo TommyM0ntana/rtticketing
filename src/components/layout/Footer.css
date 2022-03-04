@@ -1,0 +1,17 @@
+.footer-bar {
+  background: linear-gradient(90deg, #05186c, #587bee);
+  color: #fff;
+  display: flex;
+  height: 16px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  justify-content: space-between;
+  padding: 15px;
+  align-items: center;
+}
+
+p {
+  font-family: monospace;
+}

@@ -22,7 +22,7 @@ const EditTicketModal = ({ current, updateLog }) => {
     if (message === "" || tech === "") {
       M.toast({ html: "Please enter a message and tech" })
     } else {
-      const updLog = {
+      const ticketData = {
         id: current.id,
         message,
         attention,
@@ -30,7 +30,7 @@ const EditTicketModal = ({ current, updateLog }) => {
         date: new Date(),
       }
 
-      updateLog(updLog)
+      updateTicket(ticketData)
       M.toast({ html: `Ticket updated by ${tech}` })
 
       // Clear Fields
@@ -108,7 +108,7 @@ const modalStyle = {
 
 EditTicketModal.propTypes = {
   current: PropTypes.object,
-  updateLog: PropTypes.func.isRequired,
+  updateTicket: PropTypes.func.isRequired,
 }
 
 const mapStateToProps = (state) => ({
